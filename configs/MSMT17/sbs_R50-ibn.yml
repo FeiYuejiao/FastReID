@@ -3,7 +3,7 @@ _BASE_: "../Base-Strongerbaseline.yml"
 MODEL:
   BACKBONE:
     WITH_IBN: True
-    PRETRAIN_PATH: "/export/home/lxy/.cache/torch/checkpoints/resnet50_ibn_a.pth.tar"
+    PRETRAIN_PATH: "/public/home/yuchangbingroup/feiyuejiao/.cache/torch/checkpoints/resnet50_ibn_a.pth"
 
   HEADS:
     NUM_CLASSES: 1041

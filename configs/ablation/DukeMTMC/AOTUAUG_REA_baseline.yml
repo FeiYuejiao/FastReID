@@ -1,0 +1,18 @@
+_BASE_: "../../Base-baseline.yml"
+
+MODEL:
+  HEADS:
+    NUM_CLASSES: 702
+
+DATASETS:
+  NAMES: ("DukeMTMC",)
+  TESTS: ("DukeMTMC",)
+
+INPUT:
+  DO_AUTOAUG: True
+  REA:
+    ENABLED: True
+    PROB: 0.5
+    MEAN: [123.675, 116.28, 103.53]
+
+OUTPUT_DIR: "logs/ablation/new/DukeMTMC/AOTUAUG_REA_baseline"

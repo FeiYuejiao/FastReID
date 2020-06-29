@@ -1,9 +1,9 @@
-_BASE_: "../Base-bagtricks.yml"
+_BASE_: "../../Base-baseline.yml"
 
 MODEL:
   HEADS:
     NUM_CLASSES: 751
-    NORM: "syncBN"
+
   BACKBONE:
     NORM: "syncBN"
 
@@ -11,5 +11,4 @@ DATASETS:
   NAMES: ("Market1501",)
   TESTS: ("Market1501",)
 
-
-OUTPUT_DIR: "logs/market1501/bagtricks_R50"
+OUTPUT_DIR: "logs/ablation/new/Market1501/BN_baseline"

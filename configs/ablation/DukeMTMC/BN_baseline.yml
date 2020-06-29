@@ -1,0 +1,14 @@
+_BASE_: "../../Base-baseline.yml"
+
+MODEL:
+  HEADS:
+    NUM_CLASSES: 702
+
+  BACKBONE:
+    NORM: "syncBN"
+
+DATASETS:
+  NAMES: ("DukeMTMC",)
+  TESTS: ("DukeMTMC",)
+
+OUTPUT_DIR: "logs/ablation/new/DukeMTMC/BN_baseline"

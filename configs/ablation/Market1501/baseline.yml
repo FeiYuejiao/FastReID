@@ -1,0 +1,11 @@
+_BASE_: "../../Base-baseline.yml"
+
+MODEL:
+  HEADS:
+    NUM_CLASSES: 751
+
+DATASETS:
+  NAMES: ("Market1501",)
+  TESTS: ("Market1501",)
+
+OUTPUT_DIR: "logs/ablation/Market1501/baseline2"

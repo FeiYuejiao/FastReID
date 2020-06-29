@@ -27,7 +27,7 @@ This is a tiny example for converting fastreid-baseline in `meta_arch` to Caffe 
 2. Run `caffe_export.py` to get the converted Caffe model,
 
     ```bash
-    python caffe_export.py --config-file "/export/home/lxy/fast-reid/logs/market1501/bagtricks_R50/config.yaml" --name "baseline_R50" --output "logs/caffe_model" --opts MODEL.WEIGHTS "/export/home/lxy/fast-reid/logs/market1501/bagtricks_R50/model_final.pth"
+    python caffe_export.py --config-file "/public/home/yuchangbingroup/feiyuejiao/fast-reid/logs/market1501/bagtricks_R50/config.yaml" --name "baseline_R50" --output "logs/caffe_model" --opts MODEL.WEIGHTS "/public/home/yuchangbingroup/feiyuejiao/fast-reid/logs/market1501/bagtricks_R50/model_final.pth"
     ```
 
     then you can check the Caffe model and prototxt in `logs/caffe_model`.

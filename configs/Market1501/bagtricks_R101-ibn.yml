@@ -4,11 +4,11 @@ MODEL:
   BACKBONE:
     DEPTH: 101
     WITH_IBN: True
-    PRETRAIN_PATH: "/home/liaoxingyu2/lxy/.cache/torch/checkpoints/resnet101_ibn_a.pth.tar"
-
+    PRETRAIN_PATH: "/public/home/yuchangbingroup/feiyuejiao/.cache/torch/checkpoints/resnet101_ibn_a.pth"
+    NORM: "syncBN"
   HEADS:
     NUM_CLASSES: 751
-
+    NORM: "syncBN"
 
 DATASETS:
   NAMES: ("Market1501",)

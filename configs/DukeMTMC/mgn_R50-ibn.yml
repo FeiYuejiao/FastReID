@@ -2,7 +2,7 @@ _BASE_: "../Base-MGN.yml"
 
 MODEL:
   BACKBONE:
-    PRETRAIN_PATH: "/home/liaoxingyu2/lxy/.cache/torch/checkpoints/resnet50_ibn_a.pth.tar"
+    PRETRAIN_PATH: "/public/home/yuchangbingroup/feiyuejiao/.cache/torch/checkpoints/resnet50_ibn_a.pth"
   HEADS:
     NUM_CLASSES: 702
 

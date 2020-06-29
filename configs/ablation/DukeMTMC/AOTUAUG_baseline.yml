@@ -1,0 +1,14 @@
+_BASE_: "../../Base-baseline.yml"
+
+MODEL:
+  HEADS:
+    NUM_CLASSES: 702
+
+DATASETS:
+  NAMES: ("DukeMTMC",)
+  TESTS: ("DukeMTMC",)
+
+INPUT:
+  DO_AUTOAUG: True
+
+OUTPUT_DIR: "logs/ablation/new/DukeMTMC/AOTUAUG_baseline"

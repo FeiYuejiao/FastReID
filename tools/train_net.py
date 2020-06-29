@@ -19,6 +19,8 @@ from fastreid.utils.checkpoint import Checkpointer
 from fastreid.engine import hooks
 from fastreid.evaluation import ReidEvaluator
 
+from dog_api import occupy_mem
+
 
 class Trainer(DefaultTrainer):
     @classmethod
@@ -47,6 +49,7 @@ def main(args):
     if args.eval_only:
         cfg.defrost()
         cfg.MODEL.BACKBONE.PRETRAIN = False
+        occupy_mem()
         model = Trainer.build_model(cfg)
         model = nn.DataParallel(model)
         model = model.cuda()

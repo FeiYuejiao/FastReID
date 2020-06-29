@@ -11,5 +11,10 @@ DATASETS:
   NAMES: ("Market1501",)
   TESTS: ("Market1501",)
 
-
-OUTPUT_DIR: "logs/market1501/bagtricks_R50"
+INPUT:
+  REA:
+    ENABLED: False
+  RPT:
+    ENABLED: True
+    PROB: 0.5
+OUTPUT_DIR: "logs/market1501/bagtricks_R50_w_random_patch_2"

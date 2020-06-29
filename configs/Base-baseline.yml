@@ -1,46 +1,35 @@
 MODEL:
-  META_ARCHITECTURE: "Baseline"
+  META_ARCHITECTURE: 'Baseline'
 
   BACKBONE:
     NAME: "build_resnet_backbone"
-    NORM: "syncBN"
     DEPTH: 50
     LAST_STRIDE: 1
-    WITH_IBN: False
+    WITH_NL: False
     PRETRAIN: True
     PRETRAIN_PATH: "/public/home/yuchangbingroup/feiyuejiao/.cache/torch/checkpoints/resnet50-19c8e357.pth"
-
-  HEADS:
-    NAME: "BNneckHead"
     NORM: "syncBN"
-    NECK_FEAT: "before"
-    CLS_LAYER: "linear"
 
   LOSSES:
-    NAME: ("CrossEntropyLoss", "TripletLoss", )
-
+    NAME: ("CrossEntropyLoss", "TripletLoss")
     CE:
       EPSILON: 0.1
-      SCALE: 1.
+      SCALE: 1.0
 
     TRI:
-      MARGIN: 0.3
-      HARD_MINING: True
-      SCALE: 1.
+      MARGIN: 0.0
+      HARD_MINING: False
+      USE_COSINE_DIST: False
+      SCALE: 1.0
 
 DATASETS:
-  NAMES: ("DukeMTMC",)
-  TESTS: ("DukeMTMC",)
+  NAMES: ("Market1501",)
+  TESTS: ("Market1501",)
 
 INPUT:
   SIZE_TRAIN: [256, 128]
   SIZE_TEST: [256, 128]
-  REA:
-    ENABLED: True
-    PROB: 0.5
-    MEAN: [123.675, 116.28, 103.53]
   DO_PAD: True
-
 
 DATALOADER:
   PK_SAMPLER: True
@@ -63,7 +52,7 @@ SOLVER:
   WARMUP_ITERS: 2000
 
   LOG_PERIOD: 200
-  CHECKPOINT_PERIOD: 2000
+  CHECKPOINT_PERIOD: 6000
 
 TEST:
   EVAL_PERIOD: 2000

@@ -16,7 +16,7 @@ class MyTestCase(unittest.TestCase):
         cfg.MODEL.BACKBONE.DEPTH = 101
         cfg.MODEL.BACKBONE.WITH_IBN = True
         cfg.MODEL.BACKBONE.WITH_SE = True
-        cfg.MODEL.BACKBONE.PRETRAIN_PATH = '/export/home/lxy/.cache/torch/checkpoints/se_resnet101_ibn_a.pth.tar'
+        cfg.MODEL.BACKBONE.PRETRAIN_PATH = '/public/home/yuchangbingroup/feiyuejiao/.cache/torch/checkpoints/se_resnet101_ibn_a.pth.tar'
 
         net1 = build_resnet_backbone(cfg)
         net1.cuda()

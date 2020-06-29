@@ -1,15 +1,18 @@
 _BASE_: "../Base-bagtricks.yml"
 
 MODEL:
-  BACKBONE:
-    NAME: "build_resnest_backbone"
-    NORM: "syncBN"
   HEADS:
     NUM_CLASSES: 751
+    NORM: "syncBN"
+  BACKBONE:
     NORM: "syncBN"
 
 DATASETS:
   NAMES: ("Market1501",)
   TESTS: ("Market1501",)
 
-OUTPUT_DIR: "logs/market1501/bagtricks_S50"
+INPUT:
+  REA:
+    ENABLED: False
+
+OUTPUT_DIR: "logs/market1501/bagtricks_R50_wo_era"
